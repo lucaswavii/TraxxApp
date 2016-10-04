@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.traxx.traxxapp.Activitys.FechamentoActivity"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#FC9"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@drawable/marcatraxx"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        android:id="@+id/relativeLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Escolha Sua Revenda:"
+            android:textColor="@android:color/white"
+            android:id="@+id/tvFechamentoPecaRevenda"
+            android:layout_above="@+id/imgLinha"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:id="@+id/imgLinha"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_above="@+id/tvNomeDaRevendaPeca" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="NomeDaRevendaPeca"
+            android:textColor="@android:color/white"
+            android:id="@+id/tvNomeDaRevendaPeca"
+            android:layout_above="@+id/tvEnderecoDaRevendaPeca"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Endereco da Revenda"
+            android:textColor="@android:color/white"
+            android:id="@+id/tvEnderecoDaRevendaPeca"
+            android:layout_above="@+id/tvCidadeUfRevendaPeca"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Cidade/Uf"
+            android:textColor="@android:color/white"
+            android:id="@+id/tvCidadeUfRevendaPeca"
+            android:layout_above="@+id/tvFoneRevendaPeca"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Fone"
+            android:textColor="@android:color/white"
+            android:id="@+id/tvFoneRevendaPeca"
+            android:layout_above="@+id/tvEmailRevendaPeca"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="E-mail"
+            android:textColor="@android:color/white"
+            android:id="@+id/tvEmailRevendaPeca"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewRevendas"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/white"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/tvFechamentoPecaRevenda" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:gravity="center" >
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/imgOndesFooter"
+            android:src="@drawable/onda02"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Concluir"
+            android:id="@+id/btnconcluir"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/button_custom"
+            android:layout_alignParentEnd="true"
+            android:onClick="EnviaPedidos" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

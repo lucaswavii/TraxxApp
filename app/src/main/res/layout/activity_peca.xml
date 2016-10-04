@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.traxx.traxxapp.Activitys.PecaActivity"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#FC9"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@drawable/marcatraxx"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header">
+
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:id="@+id/imgConjunto"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <Button
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:id="@+id/btnContinuarCompra"
+            android:background="@drawable/button_custom"
+            android:onClick="btn_continuar_click"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/tvNomeConjunto"
+            android:textColor="@android:color/white"
+            android:text="Nome da Peça"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/btnContinuarCompra" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/tvMensagemPeca"
+            android:textColor="@android:color/white"
+            android:text="Pressione a peça para visualizar imagem"
+            android:layout_above="@+id/listViewPecas"
+            android:layout_alignParentStart="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:id="@+id/listViewPecas"
+            android:layout_below="@+id/imgConjunto"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Seu Carrinho:"
+            android:id="@+id/tvCarrinho"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/btnContinuarCompra"
+            android:layout_alignEnd="@+id/btnContinuarCompra" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Total:"
+            android:id="@+id/textView3"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/tvCarrinho"
+            android:layout_toStartOf="@+id/tvQuantidadeCotacao" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/tvQuantidadeCotacao"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:layout_above="@+id/tvQuantidadeItens"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/tvCarrinho" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/tvQuantidadeItens"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/tvCarrinho" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Itens:"
+            android:id="@+id/textView4"
+            android:textColor="@android:color/white"
+            android:layout_alignTop="@+id/tvQuantidadeCotacao"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_alignEnd="@+id/btnContinuarCompra" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:gravity="center" >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/imgOndesFooter"
+            android:src="@drawable/onda02"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
